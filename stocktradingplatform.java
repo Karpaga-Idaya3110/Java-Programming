@@ -123,7 +123,7 @@ public class StockTradingPlatform {
         stocks.add(new Stock("GOOG", "Alphabet Inc.", 2500.0, 1.2));
         stocks.add(new Stock("MSFT", "Microsoft Corporation", 200.0, 3.1));
     }
-    
+
     public void printMarketData() {
         for (Stock stock : stocks) {
             System.out.println("\t\t" + stock);
@@ -151,34 +151,34 @@ public class StockTradingPlatform {
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
-			System.out.println("\t+--------------------------------------------------------------------+");
-			System.out.println("\t|\t\t\tSTOCK TRADING PLATFORM\t\t\t     |");
-			System.out.println("\t+--------------------------------------------------------------------+");
-			
+            System.out.println("\t+--------------------------------------------------------------------+");
+            System.out.println("\t|\t\t\tSTOCK TRADING PLATFORM\t\t\t     |");
+            System.out.println("\t+--------------------------------------------------------------------+");
+
             System.out.println("\t\t[1] View Market Data\t\t[2] Buy Stock\n\t\t[3] Sell Stock\t\t\t[4] Track Portfolio\n\t\t[5] Update Market Data\t\t[6] Exit");
-          
+
             System.out.print("\n\tChoose an option: ");
             int option = scanner.nextInt();
-            
+
             System.out.println("\n");
 
             switch (option) {
                 case 1:
-					System.out.println("\t+--------------------------------------------------------------------+");
-					System.out.println("\t|\t\t\t      MARKET DATA\t\t\t     |");
-					System.out.println("\t+--------------------------------------------------------------------+");
-                
+                    System.out.println("\t+--------------------------------------------------------------------+");
+                    System.out.println("\t|\t\t\t      MARKET DATA\t\t\t     |");
+                    System.out.println("\t+--------------------------------------------------------------------+");
+
                     platform.printMarketData();
                     System.out.println("\n");
                     break;
                 case 2:
-					System.out.println("\t+--------------------------------------------------------------------+");
-					System.out.println("\t|\t\t\t       BUY STOCK\t\t\t     |");
-					System.out.println("\t+--------------------------------------------------------------------+");
-                
+                    System.out.println("\t+--------------------------------------------------------------------+");
+                    System.out.println("\t|\t\t\t       BUY STOCK\t\t\t     |");
+                    System.out.println("\t+--------------------------------------------------------------------+");
+
                     System.out.print("\t\tEnter stock symbol: ");
                     String symbol = scanner.next();
-                    
+
                     Stock stock = platform.getStockBySymbol(symbol);
                     if (stock != null) {
                         System.out.print("\t\tEnter quantity: ");
@@ -190,13 +190,13 @@ public class StockTradingPlatform {
                     System.out.println("\n");
                     break;
                 case 3:
-					System.out.println("\t+--------------------------------------------------------------------+");
-					System.out.println("\t|\t\t\t       SELL STOCK\t\t\t     |");
-					System.out.println("\t+--------------------------------------------------------------------+");
-                
+                    System.out.println("\t+--------------------------------------------------------------------+");
+                    System.out.println("\t|\t\t\t       SELL STOCK\t\t\t     |");
+                    System.out.println("\t+--------------------------------------------------------------------+");
+
                     System.out.print("\t\tEnter stock symbol: ");
                     symbol = scanner.next();
-                    
+
                     stock = platform.getStockBySymbol(symbol);
                     if (stock != null) {
                         System.out.print("\t\tEnter quantity: ");
